@@ -1,0 +1,23 @@
+.divider:after,
+.divider:before {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: #eee;
+}
+body {
+    background:url('/Images/body_bg3.jpg');
+    color: #fff;
+}
+
+h1.Forgot, .Register {
+    color: #ca2020;
+}
+
+.toggle-password {
+    float: right;
+    cursor: pointer;
+    margin-right: 12px;
+    margin-top: -31px;
+    color:black;
+}

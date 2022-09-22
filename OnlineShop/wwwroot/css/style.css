@@ -1,0 +1,1028 @@
+﻿
+
+
+
+.shopping_cart .cart .opencart {
+    width: 7px;
+    height: 5px;
+    display: block;
+    background: url(../images/header_arrow.png) 0 0 no-repeat;
+    position: absolute;
+    right: 11px;
+    top: 16px;
+}
+
+.shopping_cart span.cart_title {
+    font-size: 13px;
+    font-weight: bold;
+    color: #4F4F4F;
+}
+
+.shopping_cart span.no_product {
+    font-size: 13px;
+    font-weight: bold;
+    color: #DD0F0E;
+}
+
+/**** Grid 1_0f_4 ****/
+.grid_1_of_4 {
+    display:flow-root;
+    float: left;
+    margin: 1%;
+    box-shadow: 0px 0px 3px #CC3636;
+}
+
+    
+.images_1_of_4 {
+    width: 20.8%;
+    padding: 1.5%;
+    text-align: center;
+    position: relative;
+}
+
+    .images_1_of_4 img {
+        max-width: 50%;
+    }
+
+.discount {
+    background: url(../images/discount-img.png) no-repeat 0 0;
+    position: absolute;
+    left:200px;
+    top: 30px;
+    width: 42px;
+    height: 42px;
+}
+
+    .discount span.percentage {
+        color: #FFF;
+        left:150px;
+        font-size: 1em;
+        font-weight: bold;
+        line-height: 40px;
+    }
+
+.images_1_of_4 h2 {
+    color: #CC3636;
+    font-family: 'Monda', sans-serif;
+    font-size: 0.9em;
+    font-weight: normal;
+}
+
+.images_1_of_4 p {
+    font-size: 0.8125em;
+    padding: 0.4em 0;
+    color: #333;
+}
+
+    .images_1_of_4 p span.strike {
+        font-size: 18px;
+        font-family: 'Monda', sans-serif;
+        color: #444;
+        text-decoration: line-through;
+    }
+
+    .images_1_of_4 p span.price {
+        font-size: 18px;
+        font-family: 'Monda', sans-serif;
+        color: #590d0d;
+        margin-left: 15px;
+    }
+
+.images_1_of_4 .button {
+    margin-top: .3em;
+    line-height: 1.9em;
+    float: left;
+    width: 49%;
+}
+
+    .images_1_of_4 .button a {
+        padding: 7px 20px;
+        font-size: 0.8em;
+    }
+
+    .images_1_of_4 .button a {
+        font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+        font-size: 14px;
+        line-height: 15px;
+        text-transform: none;
+        color: #737370;
+        text-decoration: none !important;
+        background: url(../images/button-bg.png) repeat-x 0 0 #E8E8E8;
+        display: inline-block;
+        border-left: 1px solid #D4D4D4 !important;
+        border-right: 1px solid #ADADAD !important;
+        border-top: 1px solid #E0E0E0 !important;
+        border-bottom: 1px solid #9C9C9C !important;
+        cursor: pointer !important;
+        margin: 0 2px;
+        border-radius: 2px;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+
+        .images_1_of_4 .button a:hover {
+            color: #70389C;
+            background: #E8E8E8;
+        }
+
+    .images_1_of_4 .button span img {
+        position: absolute;
+    }
+
+    .images_1_of_4 .button a.cart-button {
+        padding: 7px 5px 7px 38px;
+    }
+
+
+
+.section {
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+}
+
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+.group {
+    zoom: 1;
+}
+
+.col_1_of_4 {
+    display: block;
+    float: left;
+    margin: 0% 0 1% 1.6%;
+    border-right: 2px groove #555;
+}
+
+    .col_1_of_4:first-child {
+        margin-left: 0;
+    }
+    /* all browsers except IE6 and lower */
+    .col_1_of_4:last-child {
+        border: none;
+    }
+
+.span_1_of_4 {
+    width: 20.5%;
+    padding: 1.5%;
+}
+
+    .span_1_of_4 h4 {
+        color: #ccc;
+        margin-bottom: .5em;
+        font-size: 1.2em;
+        line-height: 1.2;
+        font-family: 'Doppio One', sans-serif;
+        font-weight: normal;
+        margin-top: 0px;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+        border-bottom: 1px solid #474747;
+        padding-bottom: 0.5em;
+    }
+
+    .span_1_of_4 li a {
+        font-size: 0.8125em;
+        padding: 0.4em 0;
+        color: #979797;
+        font-family: Arial, Helvetica, sans-serif;
+        display: block;
+    }
+
+        .span_1_of_4 li a:hover, .span_1_of_4 li span:hover {
+            color: #BBB7B7;
+        }
+
+    .span_1_of_4 li span {
+        font-size: 1.2em;
+        padding: 0.2em 0;
+        color: #979797;
+        display: block;
+        cursor: pointer;
+    }
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}
+
+.group {
+    zoom: 1;
+}
+/*css Cart */
+/* Code By Webdevtrick ( https://webdevtrick.com ) */
+.product-image {
+    float: left;
+    width: 20%;
+}
+
+.product-details {
+    float: left;
+    width: 37%;
+}
+
+.product-price {
+    float: left;
+    width: 12%;
+}
+
+.product-quantity {
+    float: left;
+    width: 10%;
+}
+
+.product-removal {
+    float: left;
+    width: 9%;
+}
+
+.product-line-price {
+    float: left;
+    width: 12%;
+    text-align: right;
+}
+
+/* This is used as the traditional .clearfix class */
+.group:before, .shopping-cart:before, .column-labels:before, .product:before, .totals-item:before,
+.group:after,
+.shopping-cart:after,
+.shopping-cart:after,
+.product:after,
+.totals-item:after {
+    content: '';
+    display: table;
+}
+
+.group:after, .shopping-cart:after, .column-labels:after, .product:after, .totals-item:after {
+    clear: both;
+}
+
+.group, .shopping-cart, .column-labels, .product, .totals-item {
+    zoom: 1;
+}
+
+    /* Apply clearfix in a few places */
+    /* Apply dollar signs */
+    .product .product-price:before, .product .product-line-price:before, .totals-value:before {
+        content: '';
+    }
+
+/* Body/Header stuff */
+body {
+    padding: 0px 0px 0px 0px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+}
+
+h1 {
+    font-weight: 100;
+
+}
+
+label {
+    color: #111;
+}
+
+.shopping-cart {
+    margin-top: -45px;
+}
+
+/* Column headers */
+.column-labels label {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.column-labels .product-image, .column-labels .product-details, .column-labels .product-removal {
+    text-indent: -9999px;
+}
+
+/* Product entries */
+.product {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+    .product .product-image {
+        text-align: center;
+    }
+
+        .product .product-image img {
+            width: 100px;
+        }
+
+    .product .product-details .product-title {
+        margin-right: 30px;
+        font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
+    }
+
+    .product .product-details .product-description {
+        margin: 5px 20px 5px 0;
+        line-height: 1.4em;
+    }
+
+    .product .product-quantity input {
+        width: 40px;
+    }
+
+    .product .remove-product {
+        border: 0;
+        padding: 4px 8px;
+        background-color: #ff4242;
+        color: #fff;
+        font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
+        font-size: 12px;
+        border-radius: 3px;
+    }
+
+        .product .remove-product:hover {
+            background-color: #e60023;
+        }
+
+/* Totals section */
+.totals .totals-item {
+    float: right;
+    clear: both;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+    .totals .totals-item label {
+        float: left;
+        clear: both;
+        width: 79%;
+        text-align: right;
+    }
+
+    .totals .totals-item .totals-value {
+        float: right;
+        width: 21%;
+        text-align: right;
+    }
+
+.totals .totals-item-total {
+    font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
+}
+
+.checkout {
+    float: right;
+    border: 0;
+    margin-top: 20px;
+    padding: 6px 25px;
+    background-color: #5cb85c;
+    color: #fff;
+    font-size: 25px;
+    border-radius: 3px;
+}
+
+    .checkout:hover {
+        background-color: #019701;
+    }
+
+/* Make adjustments for tablet */
+@media screen and (max-width: 650px) {
+    .shopping-cart {
+        margin: 0;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+    }
+
+    .column-labels {
+        display: none;
+    }
+
+    .product-image {
+        float: right;
+        width: auto;
+    }
+
+        .product-image img {
+            margin: 0 0 10px 10px;
+        }
+
+    .product-details {
+        float: none;
+        margin-bottom: 10px;
+        width: auto;
+    }
+
+    .product-price {
+        clear: both;
+        width: 70px;
+    }
+
+    .product-quantity {
+        width: 100px;
+    }
+
+        .product-quantity input {
+            margin-left: 20px;
+        }
+
+        .product-quantity:before {
+            content: 'x';
+        }
+
+    .product-removal {
+        width: auto;
+    }
+
+    .product-line-price {
+        float: right;
+        width: 70px;
+    }
+}
+/* Make more adjustments for phone */
+@media screen and (max-width: 350px) {
+    .product-removal {
+        float: right;
+    }
+
+    .product-line-price {
+        float: right;
+        clear: left;
+        width: auto;
+        margin-top: 10px;
+    }
+
+    .product .product-line-price:before {
+        content: 'Item Total: $';
+    }
+
+    .totals .totals-item label {
+        width: 60%;
+    }
+
+    .totals .totals-item .totals-value {
+        width: 40%;
+    }
+}
+
+.codes {
+    bottom: 5%;
+    left: 5%;
+    position: fixed;
+}
+
+    .codes div {
+        border: 2px solid black;
+        font-size: 20px;
+        padding: 10px;
+        background-color: red;
+    }
+
+        .codes div a {
+            text-decoration: none;
+            color: white;
+            font-weight: 800;
+        }
+
+h3 {
+    /*color: #000;*/
+    font-size: 26px;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+   /* margin: 30px 0 80px;*/
+}
+
+    h3 b {
+        color: #ffc000;
+    }
+
+    h3::after {
+        content: "";
+        width: 100px;
+        position: absolute;
+        margin: 0 auto;
+        height: 4px;
+        /* background: rgba(0, 0, 0, 0.2); */
+        left: 0;
+        right: 0;
+        bottom: -20px;
+    }
+    .carousel {
+    margin: 50px auto;
+    padding: 0 70px;
+}
+
+    .carousel .carousel-item {
+        min-height: 330px;
+        text-align: center;
+        overflow: hidden;
+    }
+
+        .carousel .carousel-item .img-box {
+            height: 160px;
+            width: 100%;
+            position: relative;
+        }
+
+        .carousel .carousel-item img {
+            max-width: 100%;
+            max-height: 100%;
+            display: inline-block;
+            position: absolute;
+            bottom: 0;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+        }
+
+        .carousel .carousel-item h4 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .carousel .carousel-item .btn {
+            color: #333;
+            border-radius: 0;
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: bold;
+            background: none;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            margin-top: 5px;
+            line-height: 16px;
+        }
+
+            .carousel .carousel-item .btn:hover, .carousel .carousel-item .btn:focus {
+                color: #fff;
+                background: #000;
+                border-color: #000;
+                box-shadow: none;
+            }
+
+            .carousel .carousel-item .btn i {
+                font-size: 14px;
+                font-weight: bold;
+                margin-left: 5px;
+            }
+
+    .carousel .thumb-wrapper {
+        text-align: center;
+    }
+
+    .carousel .thumb-content {
+        padding: 15px;
+    }
+
+.carousel-control-prev, .carousel-control-next {
+    height: 100px;
+    width: 40px;
+    background: none;
+    margin: auto 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+    .carousel-control-prev i, .carousel-control-next i {
+        font-size: 30px;
+        position: absolute;
+        top: 50%;
+        display: inline-block;
+        margin: -16px 0 0 0;
+        z-index: 5;
+        left: 0;
+        right: 0;
+        color: rgba(0, 0, 0, 0.8);
+        text-shadow: none;
+        font-weight: bold;
+    }
+
+    .carousel-control-prev i {
+        margin-left: -3px;
+    }
+
+    .carousel-control-next i {
+        margin-right: -3px;
+    }
+
+.carousel .item-price {
+    font-size: 13px;
+    padding: 2px 0;
+}
+
+    .carousel .item-price strike {
+        color: #999;
+        margin-right: 5px;
+    }
+
+    .carousel .item-price span {
+        color: #86bd57;
+        font-size: 110%;
+    }
+
+.carousel .carousel-indicators {
+    bottom: -50px;
+}
+
+.carousel-indicators li, .carousel-indicators li.active {
+    width: 10px;
+    height: 10px;
+    margin: 4px;
+    border-radius: 50%;
+    border-color: transparent;
+    border: none;
+}
+
+.carousel-indicators li {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+    .carousel-indicators li.active {
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+.star-rating li {
+    padding: 0;
+}
+
+.star-rating i {
+    font-size: 14px;
+    color: #ffc000;
+}
+/* Custom Styles */
+.profile-picture {
+    height: 295px;
+    width: 295px;
+    object-fit: cover;
+}
+
+.avatar {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+}
+
+.images_1_of_4 img {
+    max-width: 90%;
+}
+
+
+
+h2 {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 2.5rem;
+}
+
+.row {
+    margin-top: 12px;
+}
+
+.column {
+    display: inline-block;
+    text-align: center;
+}
+
+figure {
+    overflow: hidden;
+}
+
+a p {
+    color: black;
+    margin-top: 8px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.column img {
+    display: block;
+    width: 100%;
+    height: 300px;
+}
+
+/* CSS Image Hover. Created refering to Naoya's Pen: https://codepen.io/nxworld/pen/ZYNOBZ */
+/*Sepia*/
+.column#sepia img {
+    -webkit-filter: sepia(100%);
+    filter: sepia(100%);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.column#sepia:hover img {
+    -webkit-filter: sepia(0);
+    filter: sepia(0);
+}
+
+/*GrayScale*/
+.column#grayscale img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.column#grayscale:hover img {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+
+/*Zoom In*/
+.column#zoomIn img {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: .1s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.column#zoomIn:hover img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+/*Zoom Out*/
+.column#zoomOut img {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.column#zoomOut:hover img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+
+/*ZoomOutsepia*/
+.column#ZoomOutsepi img {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    -webkit-filter: sepia(100%);
+    filter: sepia(70%);
+}
+.column#ZoomOutsepi:hover img {
+    -webkit-transform: scale(1);
+    -webkit-filter: sepia(0);
+    filter: sepia(0);
+    transform: scale(1);
+}
+                              
+
+
+
+
+
+/* 3D Transform. Craeted refering to Dudley Storey's Pen: https://codepen.io/dudleystorey/pen/KFLJp */
+.tdimension {
+    width: 300px;
+    height: 300px;
+    margin: 20px auto 40px auto;
+    perspective: 1000px;
+}
+
+    .tdimension a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url("https://mir-s3-cdn-cf.behance.net/project_modules/disp/e8346826957515.56361c2106f3f.png");
+        background-size: cover;
+        transform-style: preserve-3d;
+        transform: rotateX(70deg);
+        transition: all 0.8s;
+    }
+
+    .tdimension:hover a {
+        transform: rotateX(20deg);
+    }
+
+    .tdimension a:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 40px;
+        background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1));
+        transform: rotateX(90deg);
+        transform-origin: bottom;
+    }
+
+/*With Simple Caption*/
+.column#caption {
+    position: relative;
+}
+
+    .column#caption .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        opacity: 0;
+        transition: all 0.8s ease;
+    }
+
+        .column#caption .text h1 {
+            margin: 0;
+            color: white;
+        }
+
+    .column#caption:hover .text {
+        opacity: 1;
+    }
+
+    .column#caption:hover img {
+        -webkit-filter: sepia(90%);
+    }
+
+/* Craeted refering to LittleSnippets.net Pen: https://codepen.io/littlesnippets/pen/adLELd */
+.frame {
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    perspective: 500px;
+}
+
+    .frame img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .frame .details {
+        width: 70%;
+        height: 80%;
+        padding: 5% 8%;
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotateY(90deg);
+        transform-origin: 50%;
+        background: rgba(255,255,255,0.9);
+        opacity: 0;
+        transition: all 0.4s ease-in;
+    }
+
+    .frame:hover .details {
+        transform: translate(-50%, -50%) rotateY(0deg);
+        opacity: 1;
+    }
+
+
+
+.cloer p span.price {
+    font-size: 18px;
+    font-family: 'Monda', sans-serif;
+    color: #590d0d;
+    margin-left: 15px;
+}
+.row.heading h2 {
+    color: #fff;
+    font-size: 52.52px;
+    line-height: 95px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0 0 40px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.heading.heading-icon {
+    display: block;
+}
+
+.padding-lg {
+    display: block;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.practice-area.padding-lg {
+    padding-bottom: 55px;
+    padding-top: 55px;
+}
+
+.practice-area .inner {
+    border: 1px solid #999999;
+    text-align: center;
+    margin-bottom: 28px;
+    padding: 40px 25px;
+}
+
+.our-webcoderskull .cnt-block:hover {
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    border: 0;
+}
+
+.practice-area .inner h3 {
+    color: #3c3c3c;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 0;
+}
+
+.practice-area .inner p {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.practice-area .inner img {
+    display: inline-block;
+}
+
+
+.our-webcoderskull {
+   
+}
+
+    .our-webcoderskull .cnt-block {
+        float: left;
+        width: 100%;
+        background: #fff;
+        padding: 30px 20px;
+        text-align: center;
+        border: 2px solid #d5d5d5;
+        margin: 0 0 28px;
+    }
+
+        .our-webcoderskull .cnt-block figure {
+            width: 148px;
+            height: 148px;
+            border-radius: 100%;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .our-webcoderskull .cnt-block img {
+            width: 148px;
+            height: 148px;
+            border-radius: 100%;
+        }
+
+        .our-webcoderskull .cnt-block h3 {
+            color: #2a2a2a;
+            font-size: 20px;
+            font-weight: 500;
+            padding: 6px 0;
+            text-transform: uppercase;
+        }
+
+            .our-webcoderskull .cnt-block h3 a {
+                text-decoration: none;
+                color: #2a2a2a;
+            }
+
+                .our-webcoderskull .cnt-block h3 a:hover {
+                    color: #337ab7;
+                }
+
+        .our-webcoderskull .cnt-block p {
+            color: #2a2a2a;
+            font-size: 13px;
+            line-height: 20px;
+            font-weight: 400;
+        }
+
+        .our-webcoderskull .cnt-block .follow-us {
+            margin: 20px 0 0;
+        }
+
+            .our-webcoderskull .cnt-block .follow-us li {
+                display: inline-block;
+                width: auto;
+                margin: 0 5px;
+            }
+
+                .our-webcoderskull .cnt-block .follow-us li .fa {
+                    font-size: 24px;
+                    color: #767676;
+                }
+
+                    .our-webcoderskull .cnt-block .follow-us li .fa:hover {
+                        color: #025a8e;
+                    }

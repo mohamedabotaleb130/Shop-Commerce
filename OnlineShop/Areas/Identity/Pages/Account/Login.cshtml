@@ -1,0 +1,139 @@
+﻿
+
+@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+}
+<meta charset="utf-8">
+
+        
+          <link rel="stylesheet" href="~/login/css/main.css">
+
+  <div class="container py-5 h-100">
+    <div class="row d-flex align-items-center justify-content-center h-50">
+      <div class="col-md-8 col-lg-7 col-xl-6">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+          class="img-fluid" alt="Phone image">
+      </div>
+      <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+            <form id="account" method="post">
+
+                      <!-- Email input -->
+
+          <div class="form-outline mb-4">
+                        <label asp-for="Input.Email" class="form-label" for="form1Example13">Email address</label>
+                        <input asp-for="Input.Email" placeholder="Email&Username" type="email" id="form1Example13" class="form-control form-control-lg" />
+                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                    </div>
+         
+
+                    <!-- Password input -->
+
+          <div class="form-outline mb-4"  id="password">
+                        <label asp-for="Input.Password" class="form-label" for="form1Example23">Password</label>
+                        <input asp-for="Input.Password" placeholder="********" type="password" id="form1Example23" class="form-control form-control-lg" />
+                                            <i class="toggle-password fa fa-fw fa-eye-slash"></i>
+
+                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                    </div>
+
+         
+
+          <div class="d-flex justify-content-around align-items-center mb-4">
+              
+            <!-- Checkbox -->
+            <div class="form-check">
+              <label asp-for="Input.RememberMe"  class="form-check-label" >
+                                <input asp-for="Input.RememberMe" class="form-check-input" type="checkbox"  id="form1Example3" checked />
+                                @Html.DisplayNameFor(m => m.Input.RememberMe)
+                            </label>
+            </div>
+             <p>
+                        <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
+                    </p>
+          </div>
+                    <!-- Submit button -->
+
+          <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Log in</button>
+
+                    </div>
+                                        <!-- Register -->
+
+                    <p>
+                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
+                    </p>
+                                                            <!-- confirmation -->
+
+                    <p>
+                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
+                    </p>
+
+                    </form>
+       
+          <div class="divider d-flex align-items-center my-4">
+
+            <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
+          </div>
+
+           @{
+                if ((Model.ExternalLogins?.Count ?? 0) == 0)
+                {
+                    
+                }
+                else
+                {
+                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
+                        <div>
+                            <p>
+                                @foreach (var provider in Model.ExternalLogins)
+                                {
+                                    <button type="submit" class="btn btn-light btn-block" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">
+                                        @{
+                                            string imageSrc = string.Empty;
+                                            if (provider.DisplayName == "Google")
+                                                imageSrc = "https://gfx4arab.com/wp-content/uploads/2020/06/google-icon.svg";
+                                            else if (provider.DisplayName == "Facebook")
+                                                imageSrc = "https://cdn.freebiesupply.com/logos/large/2x/facebook-3-logo-png-transparent.png";
+                                            else if (provider.DisplayName == "Microsoft")
+                                                imageSrc = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Microsoft_Store_logo.svg/1200px-Microsoft_Store_logo.svg.png";
+                                        }
+                                        <img src="@imageSrc" alt="@provider.DisplayName" style="height: 20px;" />
+                                        Login With @provider.DisplayName
+                                    </button>
+                                }
+                            </p>
+                        </div>
+                    </form>
+                }
+            }
+          
+        
+       
+      </div>
+
+    </div>
+
+    
+  </div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+<script>
+    $(".toggle-password").click(function() {
+    $(this).toggleClass("fa-eye fa-eye-slash");
+    input = $(this).parent().find("input");
+    if (input.attr("type") == "password") {
+        input.attr("type", "text");
+    } else {
+        input.attr("type", "password");
+    }
+});
+</script>    
+}
+
+
+
+        

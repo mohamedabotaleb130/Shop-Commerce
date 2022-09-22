@@ -1,0 +1,107 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h1 class="Register">@ViewData["Title"]</h1>
+
+
+
+  <meta charset="utf-8">
+
+          <link rel="stylesheet" href="~/login/css/main.css">
+      
+            <div class="container ">
+
+    <div class="row d-flex align-items-center justify-content-center h-50">
+      <div class=" col-lg-7 col-xl-6">
+        <img src="~/Images/Mobile login-pana.svg" 
+          class="img-fluid" alt="Phone image">
+      </div>
+      <div class="col-md-1 col-lg-1 col-xl-5 ">
+         
+
+    <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                      <!-- Email input -->
+
+          <div class="form-outline mb-2">
+                        <label asp-for="Input.FirstName" class="form-label" for="form1Example13">FirstName</label>
+                        <input asp-for="Input.FirstName"  type="text" id="form1Example13" class="form-control form-control-lg"  maxlength="100" />
+                        <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+                    </div>
+         
+
+
+                    <div class="form-outline mb-2">
+                        <label asp-for="Input.LastName" class="form-label" for="form1Example13">LastName</label>
+                        <input asp-for="Input.LastName"  type="text" id="form1Example13" class="form-control form-control-lg"  maxlength="100" />
+                        <span asp-validation-for="Input.LastName" class="text-danger"></span>
+                    </div>
+
+                     <div class="form-outline mb-2">
+                        <label asp-for="Input.Email" class="form-label" for="form1Example13">Email</label>
+                        <input asp-for="Input.Email"  type="email" id="form1Example13" class="form-control form-control-lg" />
+                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                    </div>
+
+                    <!-- Password input -->
+       
+
+          <div class="form-outline mb-2"  id="password" >
+                        <label asp-for="Input.Password" class="form-label" for="form1Example23">Password</label>
+                        <input asp-for="Input.Password"    placeholder="********" type="password"  id=" form1Example23" class="form-control form-control-lg" />
+                    <i class="toggle-password fa fa-fw fa-eye-slash"></i>
+
+                        <span asp-validation-for="Input.Password"  class="text-danger"></span>
+                       
+                    </div>
+
+         <div class="form-outline mb-4" id="password" >
+                        <label asp-for="Input.ConfirmPassword" class="form-label" for="form1Example23">ConfirmPassword</label>
+                        <input asp-for="Input.ConfirmPassword"  placeholder="********"  type="password" id="form1Example23" class="form-control form-control-lg" />
+                                            <i class="toggle-password fa fa-fw fa-eye-slash"></i>
+
+                        <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                                           
+
+                    </div>
+
+                 <!-- Submit button -->
+
+          
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+
+                
+                                        <!-- Log in as a user. -->
+
+                    <p>
+                        <a asp-page="./Login" asp-route-returnUrl="@Model.ReturnUrl">Log in as a user.</a>
+                    </p>
+                                                           
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+<script>
+    $(".toggle-password").click(function() {
+    $(this).toggleClass("fa-eye fa-eye-slash");
+    input = $(this).parent().find("input");
+    if (input.attr("type") == "password") {
+        input.attr("type", "text");
+    } else {
+        input.attr("type", "password");
+    }
+});
+</script>    
+}
+
+

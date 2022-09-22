@@ -1,0 +1,346 @@
+﻿@using OnlineShop.Models;
+@using X.PagedList.Mvc
+@using X.PagedList.Web.Common
+@using X.PagedList.Mvc.Core
+
+@model X.PagedList.IPagedList<Product>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+@using System.Net.Http
+@using OnlineShop.Utility
+@using Microsoft.AspNetCore.Http
+@*@using System.Text.Json;
+*@
+@inject IHttpContextAccessor HttpContextAccessor
+@{
+    //var userRole = HttpContextAccessor.HttpContext.Session.GetString("roleName");
+    int count = 0;
+    List<Product> product = HttpContextAccessor.HttpContext.Session.Get<List<Product>>("products");
+    if (product==null)
+    {
+         
+        product=new List<Product>();
+    }
+    count = product.Count();
+   
+}
+
+<html lang="en">
+  <head>
+  	
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" rel="stylesheet">
+	<link href="~/style.css" rel="stylesheet">
+		<link rel="stylesheet" href="~/carousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/carousel/css/owl.theme.default.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+		<link rel="stylesheet" href="~/carousel/css/style.css">
+  </head>
+
+  
+  <body>
+	
+
+		<section class="ftco-section">
+
+	<div class="col-12 mt-1">
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <div class="img"><img class="d-block img-fluid"  src="~/Images/4.jpg" alt="First slide"></div>
+    </div>
+    <div class="carousel-item">
+      <div class="img"><img class="d-block img-fluid" src="~/Images/2.jpg" alt="Second slide"></div>
+    </div>
+    <div class="carousel-item">
+      <div class="img"><img class="d-block img-fluid" src="~/Images/bootstrap_free-ecommerce.png" alt="Third slide"></div>
+    </div>
+  </div>
+</div>
+</div>
+					<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<h2 class="heading-section mb-5 pb-md-4"></h2>
+					</div>
+					<div class="col-md-12">
+						<div class="featured-carousel owl-carousel">
+							<div class="item">
+								<div class="work">
+									<div class="img d-flex align-items-center justify-content-center rounded" style="background-image: url(/carousel/images/work-1.jpg);">
+										<a href="#" class="icon d-flex align-items-center justify-content-center">
+											<span class="ion-ios-heart"></span>
+										</a>
+									</div>
+									<div class="text pt-3 w-100 text-center">
+										<h3><a href="#">Work 01</a></h3>
+										<span>Web Design</span>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="work">
+									<div class="img d-flex align-items-center justify-content-center rounded" style="background-image: url(/carousel/images/work-2.jpg);">
+										<a href="#" class="icon d-flex align-items-center justify-content-center">
+											<span class="ion-ios-heart-outline"></span>
+										</a>
+									</div>
+									<div class="text pt-3 w-100 text-center">
+										<h3><a href="#">Work 02</a></h3>
+										<span>Web Design</span>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="work "id = "zoomIn"	>
+											<div class="img d-flex align-items-center justify-content-center rounded" style="background-image: url(/Images/electronics/photo_٢٠٢٢-٠٩-١٨_١٥-١٨-٣١.jpg);">
+										<a href="#" class="icon d-flex align-items-center justify-content-center">
+											<span class="ion-ios-heart"></span>
+										</a>
+									</div>
+									<div class="text pt-3 w-100 text-center">
+										<h3><a href="#">Work 03</a></h3>
+										<span>Web Design</span>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="work">
+									<div class="img d-flex align-items-center justify-content-center rounded" style="background-image: url(/carousel/images/work-4.jpg);">
+										<a href="#" class="icon d-flex align-items-center justify-content-center">
+											<span class="ion-ios-heart-outline"></span>
+										</a>
+									</div>
+									<div class="text pt-3 w-100 text-center">
+										<h3><a href="#">Work 04</a></h3>
+										<span>Web Design</span>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="work">
+									<div class="img d-flex align-items-center justify-content-center rounded" style="background-image: url(/carousel/images/work-5.jpg);">
+										<a href="#" class="icon d-flex align-items-center justify-content-center">
+											<span class="ion-ios-heart"></span>
+										</a>
+									</div>
+									<div class="text pt-3 w-100 text-center">
+										<h3><a href="#">Work 05</a></h3>
+										<span>Web Design</span>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="work">
+									<div class="img d-flex align-items-center justify-content-center rounded" style="background-image: url(/carousel/images/work-6.jpg);">
+										<a href="#" class="icon d-flex align-items-center justify-content-center">
+											<span class="ion-ios-heart"></span>
+										</a>
+									</div>
+									<div class="text pt-3 w-100 text-center">
+										<h3><a href="#">Work 06</a></h3>
+										<span>Web Design</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+
+    
+@*<div class="col-12 mt-1">
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <div class="img"><img class="d-block img-fluid"  src="~/Images/4.jpg" alt="First slide"></div>
+    </div>
+    <div class="carousel-item">
+      <div class="img"><img class="d-block img-fluid" src="~/Images/2.jpg" alt="Second slide"></div>
+    </div>
+    <div class="carousel-item">
+      <div class="img"><img class="d-block img-fluid" src="~/Images/bootstrap_free-ecommerce.png" alt="Third slide"></div>
+    </div>
+  </div>
+</div>
+</div>*@
+
+
+
+
+
+<br/><br/>
+		
+		
+		<br/><br/>
+		
+	<div class=" col-md-30 text-center mb-5 pb-md-4">
+
+	 <div class="row ">
+
+
+    @foreach (var productt in Model)
+    
+    {
+
+   
+
+			 <div class=" grid_1_of_4 images_1_of_4 mt-1 ">
+				  
+				 <a asp-route-id="@productt.Id"  asp-action="Detail" class = "column col-xs-6" id = "zoomIn">
+         
+					  <figure><img src="~/@productt.Image" alt="" /></figure> </a>
+                     
+					 <div class="discount">
+					 <span class="percentage">@productt.IsAvailable </span>
+					</div>
+					 <h2 class="mt-4 ">@productt.Name  </h2>
+					 <p class="pricecolert">
+						 <span class="strike">
+
+						 </span>
+						 <span class=" cloer price">EGP @productt.Price </span>
+					 </p>
+					  <div class="button"><span><img src="~/Images/cart.jpg" /><a asp-action="Detail" asp-route-id="@productt.Id" class="cart-button">Add to Cart</a></span> </div>
+					   <a asp-action="Cart" asp-controller="Home"  class="btn btn-outline-secondary "><i class="bi bi-cart"></i></a>
+				   </div>
+
+    }
+	</div>
+	</div>
+
+
+    
+	
+	
+    @*@Html.PagedListPager(Model,c=>Href("~/Customer/Home/Index?page="+c),PagedListRenderOptions.PageNumbersOnly)
+	@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))*@
+<nav>
+@Html.PagedListPager(Model, page => Url.Action("index", new { page = page }), new PagedListRenderOptions()
+{
+    ActiveLiElementClass = "active",
+    PageClasses = new[]{ "page-link"},
+    LiElementClasses=new[] { "page-item" },
+    UlElementClasses = new[] { "pagination","justify-content-center", "mt-3" },
+    LinkToNextPageFormat = "Next",
+    LinkToPreviousPageFormat = "Previous",
+    MaximumPageNumbersToDisplay = 5,
+    DisplayLinkToPreviousPage = PagedListDisplayMode.Always,
+    DisplayLinkToNextPage = PagedListDisplayMode.Always
+})
+</nav>
+<br  />
+<section class="our-webcoderskull padding-lg">
+  <div class="container">
+    <div class="row heading heading-icon">
+        <h2>Our Team</h2>
+    </div>
+    <ul class="row">
+      <li class="col-12 col-md-6 col-lg-3">
+          <div class="cnt-block equal-hight" style="height: 349px;">
+            <figure><img src="~/Images/watch/photo_٢٠٢٢-٠٦-١٥_١٥-٠٥-٥٢.jpg" class="img-responsive" alt=""></figure>
+            <h3><a href="http://www.webcoderskull.com/">Web coder skull</a></h3>
+            <p>Freelance Web Developer</p>
+            <ul class="follow-us clearfix">
+              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+      </li>
+      <li class="col-12 col-md-6 col-lg-3">
+          <div class="cnt-block equal-hight" style="height: 349px;">
+            <figure><img src="~/Images/temm.jpg" class="img-responsive" alt=""></figure>
+            <h3><a href="#">Kappua </a></h3>
+            <p>Freelance Web Developer</p>
+            <ul class="follow-us clearfix">
+              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+      </li>
+      <li class="col-12 col-md-6 col-lg-3">
+          <div class="cnt-block equal-hight" style="height: 349px;">
+            <figure><img src="~/Images/temm2.jpg" class="img-responsive" alt=""></figure>
+            <h3><a href="http://www.webcoderskull.com/">Manish </a></h3>
+            <p>Freelance Web Developer</p>
+            <ul class="follow-us clearfix">
+              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+       </li>
+      <li class="col-12 col-md-6 col-lg-3">
+          <div class="cnt-block equal-hight" style="height: 349px;">
+            <figure><img src="~/Images/temm3.jpg" class="img-responsive" alt=""></figure>
+            <h3><a href="http://www.webcoderskull.com/">Atul </a></h3>
+            <p>Freelance Web Developer</p>	
+            <ul class="follow-us clearfix">
+              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+	
+	<script src="~/carousel/js/jquery.min.js"></script>
+    <script src="~/carousel/js/popper.js"></script>
+    <script src="~/carousel/js/bootstrap.min.js"></script>
+    <script src="~/carousel/js/owl.carousel.min.js"></script>
+    <script src="~/carousel/js/main.js"></script>
+
+		
+	<div class="brand-carousel section-padding owl-carousel mt-50">
+		<div class="single-logo"><img alt="" src="~/Images/Cart.png"></div>
+		<div class="single-logo"><img alt="" src="https://app.unbounce.com/publish/assets/cc076106-6abb-42d8-86f6-358769fe83d6/ff0f7cd4-unicef-logo.png"></div>
+		<div class="single-logo"><img alt="" src="https://app.unbounce.com/publish/assets/a4d0fc88-bcf2-46f6-ab38-e7a578c7b01f/1eb5d9b1-demathieu.png"></div>
+		<div class="single-logo"><img alt="" src="https://app.unbounce.com/publish/assets/142b0597-e049-472b-8533-4739614af4f6/f561cb24-european-homes-logo.png"></div>
+		<div class="single-logo"><img alt="" src="https://app.unbounce.com/publish/assets/b69f7add-c9aa-448f-be66-1efb8efa0756/8b401227-carrefour-logo-1.png"></div>
+		<div class="single-logo"><img alt="" src="https://app.unbounce.com/publish/assets/e24d3fb0-c7d3-4c76-b61b-01b55ce8581a/e162b2f9-mcdonals-logo-1.png"></div>
+      <div class="single-logo"><img alt="" src="https://app.unbounce.com/publish/assets/ef986dc1-b9e5-4388-8a7f-7a3a27039e8b/56d0bb28-spie-logo1.png"></div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+	</script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+	</script> 
+	<script>
+	   $('.brand-carousel').owlCarousel({
+	 loop:true,
+	 margin:10,
+	 autoplay:true,
+	 responsive:{
+	   0:{
+	     items:1
+	   },
+	   600:{
+	     items:1
+	   },
+	   1000:{
+	     items:4
+	   }
+	 }
+	}) 
+
+	</script>
+
+	   </body>
+</html>
