@@ -9,8 +9,8 @@ namespace OnlineShop.Services
     {
         public async Task SendEmailAsync(string Email, string subject, string htmlMessage)
         {
-            var fromMail = "mohamedabotaleb2019@outlook.com";
-            var fromPassword = "01028437278abotaleb";
+            var fromMail = "fromMail@outlook.com";
+            var fromPassword = "fromPassword";
 
             var message = new MailMessage();
             message.From = new MailAddress(fromMail);
