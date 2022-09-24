@@ -82,3 +82,6 @@ The public administrator can block sellers and stores.
 5. Database
 
 In the project, mssql server 2019 was preferred as the database management system.
+![image](https://user-images.githubusercontent.com/78308367/192111996-f08b66fa-2b0d-40a1-8f09-3604a8bac3e5.png)
+![image](https://user-images.githubusercontent.com/78308367/192112020-a63773e1-5d56-41cd-8084-1cfa678a0483.png)
+![image](https://user-images.githubusercontent.com/78308367/192112038-20a61ee0-fa4f-4e70-b90a-70d4b0c2cb21.png)
